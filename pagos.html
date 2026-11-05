@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGO ENTRADAS Y SALIDAS <XUSK2 class="0"></XUSK2></title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f6d32d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .contenedor {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            width: 320px;
+            box-shadow: 0 4px 15px #0002;
+        }
+
+        h2 {
+            text-align: center;
+            color: #222;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #222;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            background: #f6d32d;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #f6d32d;
+        }
+
+        .aviso {
+            text-align: center;
+            font-size: 12px;
+            color: #222;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <h2>PAGOS XUSK2.0</h2>
+
+    <form id="formulario">
+
+        <input type="text"
+               placeholder="Nombre y apellidos"
+               required>
+
+        <input type="tel"
+               placeholder="Número de teléfono"
+               required>
+
+        <input type="number"
+               placeholder="Importe del pago (€)"
+               min="0"
+               step="10"
+               required>
+
+        <button type="submit">
+            REALIZAR PAGO
+        </button>
+
+    </form>
+
+    <p class="aviso">
+        SI NO PAGAS TENDRÁS AL MOSSAD EN MENOS DE 24H EN TU CASA.
+    </p>
+
+</div>
+
+<script>
+    document.getElementById("formulario")
+        .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        alert("¡Pago realizado correctamente!");
+
+        this.reset();
+    });
+</script>
+
+</body>
+</html>
