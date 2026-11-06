@@ -1,12 +1,487 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-  </body>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Concesionario XUSK2.0 - Venta de motocicletas">
+
+    <title>XUSK2.0 - CONCESIONARIO</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            color: #f3f3f8;
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #111;
+            padding: 18px 30px;
+            border-bottom: 2px solid #f6d32d;
+            text-align: center;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 35px 0;
+            flex: 1;
+        }
+
+        h1 {
+            color: #f6d32d;
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+        }
+
+        h2 {
+            color: #00008b;
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            color: #f3f3f8;
+            text-align: center;
+            font-size: 18px;
+            font-weight: normal;
+            line-height: 1.7;
+            max-width: 850px;
+            margin: 0 auto 35px;
+        }
+
+        /* CATÁLOGO DE MOTOS */
+
+        .catalogo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px auto;
+        }
+
+        .moto {
+            background-color: #111;
+            border: 2px solid #f6d32d;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .moto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 18px #f6d32d;
+        }
+
+        .moto img {
+            width: 100%;
+            height: 230px;
+            object-fit: contain;
+            background-color: white;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .moto h2 {
+            color: #f6d32d;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .descripcion {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            min-height: 100px;
+        }
+
+        .precio {
+            color: #f6d32d;
+            font-size: 23px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* BOTONES */
+
+        .botones {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .boton {
+            display: inline-block;
+            background-color: #f6d32d;
+            color: black;
+            padding: 14px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .boton:hover {
+            background-color: white;
+            transform: translateY(-3px);
+        }
+
+        /* PIE DE PÁGINA */
+
+        footer {
+            background-color: #f6d32d;
+            color: #000000;
+            text-align: center;
+            padding: 18px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* MÓVILES */
+
+        @media (max-width: 700px) {
+
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 23px;
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+
+            .catalogo {
+                grid-template-columns: 1fr;
+            }
+
+            .moto img {
+                height: 220px;
+            }
+
+            .descripcion {
+                min-height: auto;
+            }
+
+            .botones {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .boton {
+                width: 240px;
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>XUSK2.0</h1>
+    </header>
+
+    <main>
+
+        <h1>CONCESIONARIO</h1>
+
+        <h2>VENTA DE MOTOCICLETAS</h2>
+
+        <h3>
+            Bienvenido a nuestro concesionario.
+            Aquí encontrarás motocicletas seleccionadas para disfrutar
+            de la carretera, la ciudad y la velocidad.
+            ¡Encuentra tu próxima moto!
+        </h3>
+
+        <div class="catalogo">
+
+            <!-- 1. APRILIA SX 125 4T -->
+
+            <div class="moto">
+
+                <img
+                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.PC7gLbzq2D9E31tzqHjoeAHaFj%3Fr%3D0%26pid%3DApi&f=1&ipt=9377a716b780bcaf99eeef6497c92f95d2d693fd0cf4c83da59b6a4635ad0fe0&ipo=images"
+                    alt="Aprilia SX 125 4T"
+                    loading="lazy">
+
+                <h2>APRILIA SX 125 4T</h2>
+
+                <p class="descripcion">
+                    Supermotard ligera y deportiva.
+                    Ideal para ciudad y conducción ágil.
+                    Motor de 125 cc y cuatro tiempos.
+                </p>
+
+                <p class="precio">4.499 $</p>
+
+                <a class="boton"
+                   href="mailto:ventas@xusk2.com?subject=Aprilia%20SX%20125">
+                    CONSULTAR DISPONIBILIDAD
+                </a>
+
+            </div>
+
+            <!-- 2. DUCATI PANIGALE 1098 -->
+
+            <div class="moto">
+
+                <img
+                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.QeOvRE8PRRhhxyoItSad9gHaE6%3Fpid%3DApi&f=1&ipt=77b04437c9f8767b48d4a3e8a79a24514d8915d01a5bc3d59070909aebe638f1&ipo=images"
+                    alt="Ducati 1098"
+                    loading="lazy">
+
+                <h2>DUCATI PANIGALE 1098</h2>
+
+                <p class="descripcion">
+                    Deportiva italiana de altas prestaciones,
+                    motor bicilíndrico de 1098 cc,
+                    diseño espectacular y carácter racing.
+                </p>
+
+                <p class="precio">19.990 $</p>
+
+                <a class="boton"
+                   href="mailto:ventas@xusk2.com?subject=Ducati%201098">
+                    CONSULTAR DISPONIBILIDAD
+                </a>
+
+            </div>
+
+            <!-- 3. YAMAHA YZF-R125 -->
+
+            <div class="moto">
+
+                <img
+                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.LHCgQm0CJEydjh7mVcKMZgHaEK%3Fpid%3DApi&f=1&ipt=3c118a08322d580b68febf93bbfac48807467f8fa89d453c6cef0bb3a785fac5&ipo=images"
+                    alt="Yamaha YZF-R125"
+                    loading="lazy">
+
+                <h2>YAMAHA YZF-R125</h2>
+
+                <p class="descripcion">
+                    Deportiva de 125 cc con estética inspirada
+                    en las motos de competición.
+                    Perfecta para iniciarse en el mundo racing.
+                </p>
+
+                <p class="precio">5.199 $</p>
+
+                <a class="boton"
+                   href="mailto:ventas@xusk2.com?subject=Yamaha%20YZF-R125">
+                    CONSULTAR DISPONIBILIDAD
+                </a>
+
+            </div>
+
+            <!-- 4. KAWASAKI NINJA ZX-6R -->
+
+            <div class="moto">
+
+                <img
+                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.PTGrgWfuXOd7AbIZZ8BQnAHaFL%3Fr%3D0%26pid%3DApi&f=1&ipt=fa1784216da62b896741251cc93905708a597700f8c3859a02347966e27a81f6&ipo=images"
+                    alt="Kawasaki Ninja ZX-6R"
+                    loading="lazy">
+
+                <h2>KAWASAKI NINJA ZX-6R</h2>
+
+                <p class="descripcion">
+                    Superdeportiva de media cilindrada,
+                    con motor de cuatro cilindros y
+                    espíritu de circuito.
+                </p>
+
+                <p class="precio">12.499 $</p>
+
+                <a class="boton"
+                   href="mailto:ventas@xusk2.com?subject=Kawasaki%20ZX-6R">
+                    CONSULTAR DISPONIBILIDAD
+                </a>
+
+            </div>
+
+            <!-- 5. KTM 390 DUKE -->
+
+            <div class="moto">
+
+                <img
+                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.fR6T3VbsRN-CVtufZRKWJAHaE7%3Fr%3D0%26pid%3DApi&f=1&ipt=967c487a580e410a49c60fdc754962210cb83da48a4326aa7fbb5ff14fe6954b&ipo=images"
+                    alt="KTM 390 Duke"
+                    loading="lazy">
+
+                <h2>KTM 390 DUKE</h2>
+
+                <p class="descripcion">
+                    Naked deportiva, ligera y divertida.
+                    Una motocicleta ágil para ciudad
+                    y carreteras reviradas.
+                </p>
+
+                <p class="precio">6.199 $</p>
+
+                <a class="boton"
+                   href="mailto:ventas@xusk2.com?subject=KTM%20390%20Duke">
+                    CONSULTAR DISPONIBILIDAD
+                </a>
+
+            </div>
+
+            <!-- 6. HONDA CBR650R -->
+
+            <div class="moto">
+
+                <img
+                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%2Fid%2FOIP.vRkkplginqh1nQRSu5sAQQHaEZ%3Fr%3D0%26pid%3DApi&f=1&ipt=19f6961a3b8f66f6ccb082ec71aa085b26c04276eee11448108ab2bf0de5f776&ipo=images"
+                    alt="Honda CBR650R"
+                    loading="lazy">
+
+                <h2>HONDA CBR650R</h2>
+
+                <p class="descripcion">
+                    Deportiva de cuatro cilindros,
+                    equilibrada para disfrutar tanto
+                    de rutas como de desplazamientos diarios.
+                </p>
+
+                <p class="precio">10.299 $</p>
+
+                <a class="boton"
+                   href="mailto:ventas@xusk2.com?subject=Honda%20CBR650R">
+                    CONSULTAR DISPONIBILIDAD
+                </a>
+
+            </div>
+
+            <!-- 7. BMW S1000RR -->
+
+            <div class="moto">
+
+                <img
+                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.quisR7lEj13Nql68x52KJgHaEK%3Fr%3D0%26pid%3DApi&f=1&ipt=1f5791ee6d525cb09b22720634174230b135150489a651b9c303384ca38d6a88&ipo=images"
+                    alt="BMW S1000RR"
+                    loading="lazy">
+
+                <h2>BMW S1000RR</h2>
+
+                <p class="descripcion">
+                    Superdeportiva de altas prestaciones,
+                    tecnología avanzada y diseño
+                    inspirado directamente en la competición.
+                </p>
+
+                <p class="precio">21.999 $</p>
+
+                <a class="boton"
+                   href="mailto:ventas@xusk2.com?subject=BMW%20S1000RR">
+                    CONSULTAR DISPONIBILIDAD
+                </a>
+
+            </div>
+
+            <!-- 8. HONDA CBR 600 RR -->
+
+            <div class="moto">
+
+                <img
+                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.LqTj1leWjmAUr0HMqC6ZjwHaHa%3Fr%3D0%26pid%3DApi&f=1&ipt=05c06aabc94cf31e13ad9ea6a88846f16c1519d117b60d8d6d3ff0a2920a0140&ipo=images"
+                    alt="Honda CBR 600 RR"
+                    loading="lazy">
+
+                <h2>HONDA CBR 600 RR</h2>
+
+                <p class="descripcion">
+                    Superdeportiva japonesa de 600 cc,
+                    con motor de cuatro cilindros,
+                    diseño agresivo y ADN de competición.
+                    Ideal para los amantes de las deportivas.
+                </p>
+
+                <p class="precio">9.999 $</p>
+
+                <a class="boton"
+                   href="mailto:ventas@xusk2.com?subject=Honda%20CBR%20600%20RR">
+                    CONSULTAR DISPONIBILIDAD
+                </a>
+
+            </div>
+
+            <!-- 9. APRILIA RS 125 2T -->
+
+            <div class="moto">
+
+                <img
+                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.L8eubxirzhO52rFt632N5QHaEu%3Fr%3D0%26pid%3DApi&f=1&ipt=15595b2b500bd14012abbe8582d44c73d981cabb0c39e45a9787f347c0128d17&ipo=images"
+                    alt="Aprilia RS 125 2T"
+                    loading="lazy">
+
+                <h2>APRILIA RS 125 2T</h2>
+
+                <p class="descripcion">
+                    Deportiva italiana clásica de 125 cc
+                    y motor de dos tiempos.
+                    Una moto ligera, con carácter racing
+                    y muy apreciada por los aficionados.
+                </p>
+
+                <p class="precio">3.499 $</p>
+
+                <a class="boton"
+                   href="mailto:ventas@xusk2.com?subject=Aprilia%20RS%20125%202T">
+                    CONSULTAR DISPONIBILIDAD
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- NAVEGACIÓN -->
+
+        <div class="botones">
+
+            <a class="boton" href="index.html">
+                VOLVER AL INICIO
+            </a>
+
+            <a class="boton" href="fanzone.html">
+                FAN ZONE
+            </a>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Página creada por XUSK2 © Noviembre 2026</p>
+    </footer>
+
+</body>
+
 </html>
+
+
+
